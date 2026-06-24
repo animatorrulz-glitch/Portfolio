@@ -1,0 +1,177 @@
+# DEPLOYMENT COMMANDS - Copy & Paste These
+
+## Method 1: VERCEL (Easiest - Recommended)
+
+# Install dependencies
+npm install
+
+# Build the project
+npm run build
+
+# Install Vercel CLI globally
+npm install -g vercel
+
+# Login to Vercel (opens browser)
+vercel login
+
+# Deploy to preview
+vercel
+
+# Deploy to production
+vercel --prod
+
+# That's it! Your site is live at the URL shown in terminal
+
+
+## Method 2: NETLIFY
+
+# Install dependencies
+npm install
+
+# Build the project
+npm run build
+
+# Install Netlify CLI globally
+npm install -g netlify-cli
+
+# Login to Netlify
+netlify login
+
+# Deploy
+netlify deploy
+
+# When asked "Publish directory", type: dist
+
+# Deploy to production
+netlify deploy --prod
+
+
+## Method 3: GITHUB PAGES
+
+# Initialize git (if not already)
+git init
+
+# Add all files
+git add .
+
+# Commit
+git commit -m "Deploy AI Character Portfolio"
+
+# Create repo on GitHub.com first, then:
+git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
+
+# Push to GitHub
+git branch -M main
+git push -u origin main
+
+# Go to GitHub repo → Settings → Pages
+# Set source to "GitHub Actions"
+# The workflow will auto-deploy!
+
+
+## TESTING LOCALLY BEFORE DEPLOY
+
+# Install dependencies
+npm install
+
+# Run development server (test while coding)
+npm run dev
+# Open: http://localhost:5173
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+# Open: http://localhost:4173
+
+
+## QUICK DEPLOY (NO CLI NEEDED)
+
+Vercel Website Method:
+1. Go to https://vercel.com
+2. Sign up/login
+3. Click "Add New Project"
+4. Drag your project folder OR connect GitHub
+5. Click Deploy
+6. Done!
+
+Netlify Website Method:
+1. Build first: npm run build
+2. Go to https://netlify.com
+3. Sign up/login
+4. Drag the "dist" folder to Netlify Drop
+5. Done!
+
+
+## UPDATING YOUR DEPLOYED SITE
+
+If using Vercel CLI:
+npm run build
+vercel --prod
+
+If using Netlify CLI:
+npm run build
+netlify deploy --prod
+
+If using GitHub Pages:
+git add .
+git commit -m "Update portfolio"
+git push
+# Auto-deploys!
+
+
+## TROUBLESHOOTING
+
+Build fails?
+→ Delete node_modules folder
+→ Run: npm install
+→ Run: npm run build
+
+Deploy command not found?
+→ Install CLI globally with -g flag
+→ Example: npm install -g vercel
+
+Site looks broken after deploy?
+→ Make sure you deployed the "dist" folder
+→ Clear browser cache (Ctrl+Shift+R)
+→ Check console for errors (F12)
+
+
+## CUSTOM DOMAIN (Optional)
+
+Vercel:
+1. Go to project settings
+2. Click "Domains"
+3. Add your domain
+4. Update DNS as instructed
+
+Netlify:
+1. Go to site settings
+2. Click "Domain management"
+3. Add custom domain
+4. Update DNS records
+
+
+## GET YOUR DEPLOYED URL
+
+After deployment, you'll get a URL like:
+- Vercel: https://your-portfolio.vercel.app
+- Netlify: https://your-portfolio.netlify.app
+- GitHub: https://username.github.io/repo-name
+
+Use this URL in your job applications!
+
+
+## FASTEST METHOD (LITERALLY 2 MINUTES)
+
+1. npm install
+2. npm run build
+3. Go to https://vercel.com
+4. Sign up with GitHub
+5. Click "Add New Project"
+6. Upload your project folder
+7. Click "Deploy"
+8. DONE! 🎉
+
+Your portfolio is now live and ready to share!
